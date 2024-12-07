@@ -1,75 +1,63 @@
 <!DOCTYPE html>
-<html>
-<body>
-    <head>
-<meta charset="utf-8"
-          name="viewport"
-          content="width=device-width,
-                   initial-scale=.75" />
-<title>structure2</title>
-
-<body>
-    <h1>
-        structure2 ᕱ__ᕱ
-    </h1>
-</body>
- 
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+    <title>structure2</title>
     <style>
-       body {
-        background-color: black;
+        body {
+            background-color: black;
+        }
+
         h1 {
             color: white;
             text-align: center;
             border-style: dashed;
             border-color: red;
         }
+
+        .marquee {
+            border: 5px dotted white; /* Changed to dotted border */
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden; 
+            height: 100px; /* Adjust based on image size */
+        }
+
+        .marquee span {
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+            white-space: nowrap;
+            will-change: transform;
+        }
+
+        .marquee img {
+            height: 100%; /* Adjust to fit inside the marquee */
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .marquee span {
+                animation: marquee 20s linear infinite; 
+            }
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
     </style>
-
-
- .marquee {
-    border: 5px solid white; 
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden; 
-    height: 100px; 
-}
-
-.marquee span {
-    display: inline-block;
-    animation: marquee 25s linear infinite;
-    white-space: nowrap;
-    will-change: transform;
-}
-
-.marquee img {
-    height: 100%; /* Adjust to fit inside the marquee */
-    display: inline-block;
-}
-
-@media (max-width: 768px) {
-    .marquee span {
-        animation: marquee 20s linear infinite; 
-    }
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-                  
-</style>
-
-
-      <div class="marquee">
-    <span>
-        <img src="aschool1.jpg" alt="cy vaping on a sculpture">
-    </span>
-</div>
-        
 </head>
-
+<body>
+    <h1>structure2 ᕱ__ᕱ</h1>
+    <div class="marquee">
+        <span>
+            <img src="aschool1.jpg" alt="cy vaping on a sculpture">
+        </span>
+    </div>
+</body>
 </html>
