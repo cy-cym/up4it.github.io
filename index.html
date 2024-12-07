@@ -16,10 +16,6 @@
             border-color: red;
         }
 
-        img {
-              border: 5px solid white;
-}
-
         .marquee {
             position: relative;
             overflow: hidden; 
@@ -28,12 +24,14 @@
 
         .marquee span {
             display: inline-block;
+            padding-right: 100%;
             animation: marquee 10s linear infinite;
             white-space: nowrap;
             will-change: transform;
         }
 
         .marquee img {
+            border: 5px solid white;
             height: 80%; /* Adjust to fit inside the marquee */
             display: inline-block;
         }
