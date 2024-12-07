@@ -27,41 +27,48 @@
 
 
  .marquee {
-    border: 5px solid white;
+    border: 5px solid white; 
     box-sizing: border-box;
     position: relative;
+    overflow: hidden; 
+    height: 100px; 
+}
+
+.marquee span {
+    display: inline-block;
+    animation: marquee 25s linear infinite;
+    white-space: nowrap;
     will-change: transform;
-        } 
-         .marquee span {
-		display: inline-block;
-   		padding-left: 5%;
-    		animation: marquee 25s linear infinite;
-    		white-space: nowrap;
-		will-change: transform;
-        }
-		@media (max-width: 768px) {
+}
+
+.marquee img {
+    height: 100%; /* Adjust to fit inside the marquee */
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
     .marquee span {
-        padding-left: .1%; 
         animation: marquee 20s linear infinite; 
     }
-		}
-        @keyframes marquee {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
                   
 </style>
 
 
-          <div class="marquee">
-    <span>  <img src="aschool1.jpg"
-                alt="cy vaping on a sculpture"
-                 align="center"</span>
-	  </div>
+      <div class="marquee">
+    <span>
+        <img src="aschool1.jpg" alt="cy vaping on a sculpture">
+    </span>
+</div>
         
 </head>
 
