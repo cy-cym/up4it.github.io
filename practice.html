@@ -46,6 +46,28 @@ a:visited {
 
 div.scroll-container img {
   padding: 10px;
+
+    table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+td {
+  width: 33.33%; /* Keep 3 columns */
+  padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    width: 600px; /* Fixed width so it scrolls instead of compressing */
+  }
+}
 </style>
 
       <div class="scroll-container">
@@ -69,6 +91,37 @@ div.scroll-container img {
     <img src="mypalms.jpg" alt="slide5">
     <img src="ourbody.jpg" alt="slide6">
 </div>
+
+        <div class="table-wrapper">
+    <table>
+      <tr>
+    <td>
+        <img style="vertical-align: bottom;"  
+            src="puzzl.jpg" 
+                alt="assorted objects on a picnic table at a campsite" >
+                </td>
+    <td><img style="vertical-align: bottom;" 
+            src="down.jpg" 
+                alt="pink sunset" 
+                ></td>
+             <td><img style="vertical-align: bottom;" 
+            src="mypalms.jpg" 
+                alt="table at a diner w creamer and food and hands" 
+                ></td>
+          <td><img style="vertical-align: bottom;" 
+            src="exhibita.jpg" 
+                alt="pink sunset" 
+                ></td>
+             <td><img style="vertical-align: bottom;" 
+            src="lamb.jpg" 
+                alt="table at a diner w creamer and food and hands" 
+                ></td>
+          <td><img style="vertical-align: bottom;" 
+            src="ourbody.jpg" 
+                alt="table at a diner w creamer and food and hands" 
+                ></td>
+      </tr>
+    </table>
 
 
       
